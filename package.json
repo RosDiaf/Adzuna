@@ -4,6 +4,7 @@
   "description": "Adzuna Test Form",
   "main": "index.js",
   "scripts": {
+    "start:dev": "webpack-dev-server",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +22,8 @@
     "jquery": "^3.4.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "webpack": "^4.40.2"
+    "webpack": "^4.40.2",
+    "webpack-dev-server": "^3.8.1"
   },
   "devDependencies": {
     "css-loader": "^3.2.0",
