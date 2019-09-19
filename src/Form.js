@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { 
   isFieldValidated,
   isCharactersLengthValid,
+  isEmojiValid,
   clearStatus } from './shared/FormValidation';
 import { wordCounter } from './shared/WordCounter';
 import { constants } from './shared/constants';

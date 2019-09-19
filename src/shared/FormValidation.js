@@ -58,5 +58,6 @@ let clearStatus = (obj, type) => {
 export {
   isFieldValidated,
   isCharactersLengthValid,
+  isEmojiValid,
   clearStatus
 }
