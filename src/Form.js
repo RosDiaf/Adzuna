@@ -50,6 +50,11 @@ class Form extends React.Component {
       $(email).siblings('small').text(constants.errorMessages.email)
     }
 
+    // -- Emoji provided, check if exist in the string and display error message
+    else if(isEmojiValid(notes.val()) === true) {
+        $(notes).siblings('small').text(constants.errorMessages.emoji)
+    }
+
     // -- Notes provided, validate correct length.
     // -- Validation should pass only if user has entered 20 characters or  more in this field
     else if(isCharactersLengthValid(notes, 20) === false) {

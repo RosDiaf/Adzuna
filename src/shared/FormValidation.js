@@ -32,6 +32,20 @@ let isCharactersLengthValid = (textArea, max) => {
   }
 }
 
+
+/**
+ * Emoji validation method with one parameters [string].
+ * Check if text has emoji included
+ */
+let isEmojiValid = (str) => {
+  const ranges = [
+  '\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]',
+  ' ', // Also allow spaces
+  ].join('|');
+  let emojiRegEx = new RegExp(ranges, 'g');
+  return emojiRegEx.test(str);
+}
+
 /**
  * Clear message status method with two parameters [container, css class].
  * Check if text area empty

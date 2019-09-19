@@ -5,7 +5,8 @@ export const constants = {
     errorMessages: {
         name: 'Enter valid name. Only letters and spaces',
         email: 'Enter valid email address.',
-        notes: 'Enter minimum 20 characters.'
+        notes: 'Enter minimum 20 characters.',
+        emoji: 'Emoji not allowed. Enter valid characters'
     },
     regExp: {
         name: /^[a-zA-Z\s]+$/,
