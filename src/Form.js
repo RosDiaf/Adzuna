@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { 
   isFieldValidated,
   isCharactersLengthValid,
-  clearStatus } from './FormValidation';
-import { wordCounter } from './WordCounter';
-import { constants } from './constants';
+  clearStatus } from './shared/FormValidation';
+import { wordCounter } from './shared/WordCounter';
+import { constants } from './shared/constants';
 import $ from 'jquery';
 
 class Form extends React.Component {
