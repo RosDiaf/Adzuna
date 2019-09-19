@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.form {
+  .status {
+    padding: 10px 0;
+    text-align: center;
+    color: $statusDefault;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .success {
+    background: $statusSuccess;
+  }
+  .failure {
+    background: $statusFailure;
+  }
+  .error {
+    color: $formErrorTextColor;
+    display: block;
+  }
+  button {
+    margin-right: 5px;
+  }
+  margin: 20px;
+  .centered {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
