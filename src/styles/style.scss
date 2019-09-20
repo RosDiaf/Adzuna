@@ -15,8 +15,11 @@
     background: $statusFailure;
   }
   .error {
+    background-color: $formErrorBgColor;    
     color: $formErrorTextColor;
     display: block;
+    font-size: 1em;
+    padding: 0 5px;
   }
   button {
     margin-right: 5px;

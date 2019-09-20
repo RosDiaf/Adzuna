@@ -101,8 +101,8 @@ class Form extends React.Component {
                   <div className="form-group">
                     <label htmlFor="notes">Notes: </label>
                     <textarea className="form-control" id="notes" rows="3" placeholder="Enter notes" onKeyDown={this.clearError} onKeyUp={this.counter}></textarea>
-                    <span>Counter: {this.state.count}</span> | <span>Word: {this.state.word}</span>
                     <small className="error"></small>
+                    <span>Counter: {this.state.count}</span> | <span>Word: {this.state.word}</span>
                   </div>
                   <button type="submit" className="btn btn-primary" onClick={this.onSubmit}>Submit</button>
                   <button type="button" className="btn btn-secondary" onClick={this.reset}>Reset</button>
