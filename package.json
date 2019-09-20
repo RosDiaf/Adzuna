@@ -4,7 +4,7 @@
   "description": "Adzuna Test Form",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --hot",
+    "start:dev": "webpack-dev-server --open",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
