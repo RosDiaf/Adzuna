@@ -8,7 +8,7 @@ import { wordCounter } from './shared/WordCounter';
 import { constants } from './shared/constants';
 import $ from 'jquery';
 
-class Form extends React.Component {
+class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {count: 0, word: 0};
@@ -116,4 +116,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default Container;

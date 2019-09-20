@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Form from './Form';
+import Form from './Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.scss';
 
