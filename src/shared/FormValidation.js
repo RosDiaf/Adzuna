@@ -39,8 +39,7 @@ let isCharactersLengthValid = (textArea, max) => {
  */
 let isEmojiValid = (str) => {
   const ranges = [
-  '\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]',
-  ' ', // Also allow spaces
+    '\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]'
   ].join('|');
   let emojiRegEx = new RegExp(ranges, 'g');
   return emojiRegEx.test(str);
