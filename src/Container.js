@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Form from './Form';
 import { 
   isFieldValidated,
   isCharactersLengthValid,
@@ -81,32 +82,19 @@ class Container extends React.Component {
   render() {
     return(
       <Fragment>
-        <div class="jumbotron bg-info form">
+        <div className="jumbotron bg-info form">
           <div className="container">
             <div className="row centered">
               <div className="col-lg-6">
                 <h1>Adzuna Test Form</h1>
                 <div className="status"></div>
-                <form id="myForm">
-                  <div className="form-group">
-                    <label htmlFor="name">Full name: </label>
-                    <input type="text" className="form-control" id="name" placeholder="Enter full name" onKeyDown={this.clearError} />
-                    <small className="error"></small>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="email">Email: </label>
-                    <input type="email" className="form-control" id="email" placeholder="Enter email" onKeyDown={this.clearError}/>
-                    <small className="error"></small>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="notes">Notes: </label>
-                    <textarea className="form-control" id="notes" rows="3" placeholder="Enter notes" onKeyDown={this.clearError} onKeyUp={this.counter}></textarea>
-                    <small className="error"></small>
-                    <span>Counter: {this.state.count}</span> | <span>Word: {this.state.word}</span>
-                  </div>
-                  <button type="submit" className="btn btn-primary" onClick={this.onSubmit}>Submit</button>
-                  <button type="button" className="btn btn-secondary" onClick={this.reset}>Reset</button>
-                </form>
+                <Form 
+                  count={this.state.count}
+                  word={this.state.word} 
+                  onKeyDown={this.clearError} 
+                  onKeyUp={this.counter}
+                  onClickReset={this.reset} 
+                  onClickSubmit={this.onSubmit}/>
               </div>
             </div>
           </div>
