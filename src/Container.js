@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Form from './Form';
+import Status from './Status';
 import { 
   isFieldValidated,
   isCharactersLengthValid,
@@ -12,7 +13,7 @@ import $ from 'jquery';
 class Container extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {count: 0, word: 0};
+    this.state = {count: 0, word: 0, status: null};
     this.counter = this.counter.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -64,17 +65,9 @@ class Container extends React.Component {
     }
 
     else {
-      // -- Form successfully validated, thank you message displayed
-      $('.status')
-        .removeClass('failure')
-        .addClass('success')
-        .show()
-        .text(constants.formStatus.successfully)
-        .delay(2000)
-        .fadeOut();
-
       this.setState({ 
-        word: wordCounter(notes)
+        word: wordCounter(notes),
+        status: 'success'
       })
     }
   }
@@ -87,7 +80,7 @@ class Container extends React.Component {
             <div className="row centered">
               <div className="col-lg-6">
                 <h1>Adzuna Test Form</h1>
-                <div className="status"></div>
+                <Status status={this.state.status} />
                 <Form 
                   count={this.state.count}
                   word={this.state.word} 
